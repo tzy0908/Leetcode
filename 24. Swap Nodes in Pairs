@@ -19,3 +19,40 @@ class Solution:
             head = first.next
 
         return dummy.next
+
+Suppose we have the linked list: 1 -> 2 -> 3 -> 4
+
+Initialization:
+
+dummy is initialized with a node containing the value 0.
+dummy.next points to the original head node (1).
+prev is set to dummy.
+First Iteration:
+
+head points to the first node (1).
+head.next points to the second node (2).
+In this iteration, we swap the nodes 1 and 2:
+
+prev.next is updated to point to node 2.
+1's next is updated to point to 2's next, which is 3.
+2's next is updated to point to 1.
+The linked list after swapping: 2 -> 1 -> 3 -> 4
+
+Second Iteration:
+
+head points to the third node (3).
+head.next points to the fourth node (4).
+In this iteration, we swap the nodes 3 and 4:
+
+prev.next is updated to point to node 4.
+3's next is updated to point to 4's next, which is None (end of the list).
+4's next is updated to point to 3.
+The linked list after swapping: 2 -> 1 -> 4 -> 3
+
+After Iterations:
+The final swapped linked list is: 2 -> 1 -> 4 -> 3
+
+Return:
+The method returns dummy.next, which is the new head of the linked list (2).
+
+So, the input linked list [1, 2, 3, 4] is swapped in pairs, resulting in the output linked list [2, 1, 4, 3]. The values within the nodes are not modified; only the nodes' positions are changed.
