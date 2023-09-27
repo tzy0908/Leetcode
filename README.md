@@ -1,2 +1,2 @@
 # Leetcode
-For sloveing leetcode problems
+For sloving leetcode problems
